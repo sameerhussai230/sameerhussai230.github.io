@@ -1,280 +1,619 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sameer Hussain | Lead Data & AI Architect</title>
+    <title>Sameer Hussain | Senior Data Scientist & AI Architect</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .gradient-text {
-            background: linear-gradient(135deg, #38BDF8 0%, #34D399 50%, #818CF8 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
         }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-white">
 
-    <nav class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="flex items-center space-x-3">
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                </span>
-                <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-full">
-                    Global Enterprise Systems | US & EMEA Time Zone Aligned
-                </span>
-            </div>
-            <div class="flex items-center space-x-5">
-                <a href="https://www.linkedin.com/in/hussainsameer/" target="_blank" class="text-slate-400 hover:text-sky-400 transition"><i class="fab fa-linkedin text-xl"></i></a>
-                <a href="https://github.com/sameerhussai230" target="_blank" class="text-slate-400 hover:text-slate-200 transition"><i class="fab fa-github text-xl"></i></a>
-                <a href="mailto:sameerhussain230@gmail.com" class="bg-sky-600 hover:bg-sky-500 text-white font-medium text-xs px-4 py-2 rounded-lg transition shadow-lg shadow-sky-500/20">Contact Directly</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="max-w-7xl mx-auto px-6 pt-12 pb-10">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
-            <div class="lg:col-span-2 space-y-6">
-                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight">
-                    Hi, I'm <span class="gradient-text">Sameer Hussain</span> 👋
-                </h1>
-                <p class="text-xl font-medium text-slate-200 leading-snug">
-                    Lead Data & AI Systems Architect | Petabyte Lakehouse Platforms, Agentic AI & Regulatory Systems
-                </p>
-                <p class="text-slate-400 text-base leading-relaxed max-w-2xl">
-                    Architecting digital backbones for modern data warehousing, generative AI, and regulatory compliance. Operating across <b>Azure Fabric, Databricks, Snowflake</b>, and <b>LangGraph/RAG workflows</b> to bridge high-throughput data engineering with governed enterprise AI.
-                </p>
-
-                <div class="flex flex-wrap gap-2 pt-2">
-                    <span class="bg-slate-900 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-md"><i class="fas fa-certificate text-sky-400 mr-1.5"></i>3x Microsoft Certified (DP-700, DP-203, PL-300)</span>
-                    <span class="bg-slate-900 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-md"><i class="fas fa-graduation-cap text-emerald-400 mr-1.5"></i>IIT M.Tech Environmental Modeling</span>
-                    <span class="bg-slate-900 border border-slate-800 text-slate-300 text-xs px-3 py-1.5 rounded-md"><i class="fas fa-trophy text-amber-400 mr-1.5"></i>GATE AIR 596</span>
-                </div>
-            </div>
-
-            <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl space-y-4 shadow-xl">
-                <h3 class="text-sm font-bold uppercase tracking-wider text-slate-300 border-b border-slate-800 pb-3">Core Expertise Domains</h3>
-                <ul class="text-sm space-y-2.5 text-slate-400">
-                    <li class="flex items-center"><i class="fas fa-server text-sky-400 mr-2.5 w-4"></i> Distributed Medallion Lakehouses</li>
-                    <li class="flex items-center"><i class="fas fa-shield-halved text-emerald-400 mr-2.5 w-4"></i> Zero-Trust PII & Text-to-SQL Engines</li>
-                    <li class="flex items-center"><i class="fas fa-leaf text-amber-400 mr-2.5 w-4"></i> EUDR, GDPR & ESG Intelligence</li>
-                    <li class="flex items-center"><i class="fas fa-microchip text-purple-400 mr-2.5 w-4"></i> Agentic RAG & Vision AI Systems</li>
-                </ul>
-                <div class="pt-2">
-                    <a href="https://drive.google.com/file/d/1U89Us8Pl8KIkv8TgIqzAIlhJHowPimLq/view" target="_blank" class="w-full inline-block text-center bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white font-medium py-2.5 rounded-xl text-xs transition">
-                        <i class="fas fa-file-arrow-down mr-2"></i> Download Complete Executive CV
-                    </a>
-                </div>
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <span class="text-xl font-bold bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent">
+                Sameer Hussain
+            </span>
+            <div class="flex items-center gap-4">
+                <a href="https://www.linkedin.com/in/hussainsameer/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-sky-400 transition-colors text-lg" title="LinkedIn">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:sameerhussain230@gmail.com" class="text-slate-400 hover:text-red-400 transition-colors text-lg" title="Email">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
             </div>
         </div>
     </header>
 
-    <section class="border-y border-slate-800/80 bg-slate-900/40 py-8 my-6">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div>
-                <div class="text-3xl font-extrabold text-sky-400">Petabyte</div>
-                <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Scale Architecture</div>
-            </div>
-            <div>
-                <div class="text-3xl font-extrabold text-emerald-400">100%</div>
-                <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">LLM PII Isolation</div>
-            </div>
-            <div>
-                <div class="text-3xl font-extrabold text-purple-400">GDPR / EUDR</div>
-                <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Regulatory Frameworks</div>
-            </div>
-            <div>
-                <div class="text-3xl font-extrabold text-amber-400">3x Certs</div>
-                <div class="text-xs uppercase tracking-wider text-slate-400 mt-1">Microsoft Certified</div>
-            </div>
-        </div>
-    </section>
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
 
-    <section class="max-w-7xl mx-auto px-6 py-8">
-        <h2 class="text-2xl font-bold mb-2 flex items-center gap-2">
-            <i class="fas fa-cubes text-sky-400"></i> Production Systems & Open Source Work
-        </h2>
-        <p class="text-slate-400 text-sm mb-8">Architectural blueprints, interactive video demos, and production repositories.</p>
+        <section class="text-center space-y-6 max-w-4xl mx-auto pt-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-sky-500/30 bg-sky-500/10 text-sky-400 text-xs font-semibold tracking-wide uppercase">
+                <i class="fa-solid fa-certificate"></i> 3x Microsoft Certified (DP-700 • DP-203 • PL-300)
+            </div>
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
+                Hi, I'm <span class="bg-gradient-to-r from-sky-400 via-teal-300 to-emerald-400 bg-clip-text text-transparent">Sameer Hussain</span> 👋
+            </h1>
+            <p class="text-xl font-medium text-slate-300">
+                Senior Data Scientist, AI Architect & Data Engineering Technical Lead
+            </p>
+            <p class="text-slate-400 leading-relaxed text-base sm:text-lg">
+                Architecting the digital backbone for Modern Data Warehousing, Generative AI, and Net-Zero Intelligence. Specializing in petabyte-scale lakehouses with <span class="text-slate-200 font-semibold">Azure Fabric, Databricks, and Snowflake</span>, alongside <span class="text-slate-200 font-semibold">Generative AI (RAG & Agentic Workflows)</span>, <span class="text-slate-200 font-semibold">Vision AI (YOLO)</span>, and <span class="text-slate-200 font-semibold">Geospatial Analytics</span>.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4 pt-2">
+                <a href="https://www.linkedin.com/in/hussainsameer/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-medium text-sm transition-all shadow-lg shadow-sky-600/25">
+                    <i class="fa-brands fa-linkedin text-lg"></i> Connect on LinkedIn
+                </a>
+                <a href="mailto:sameerhussain230@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-medium text-sm transition-all">
+                    <i class="fa-solid fa-envelope text-lg text-red-400"></i> Contact via Email
+                </a>
+            </div>
+        </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <section class="space-y-6">
+            <h2 class="text-2xl font-bold text-slate-100 text-center flex items-center justify-center gap-2">
+                <i class="fa-solid fa-layer-group text-sky-400"></i> Tech Stack & Expertise
+            </h2>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-sky-500/50 transition">
+                    <i class="fa-brands fa-microsoft text-sky-400 text-base"></i> Azure Fabric
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-orange-500/50 transition">
+                    <i class="fa-solid fa-database text-orange-500 text-base"></i> Databricks
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-sky-400/50 transition">
+                    <i class="fa-solid fa-snowflake text-sky-300 text-base"></i> Snowflake
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-amber-500/50 transition">
+                    <i class="fa-solid fa-bolt text-amber-500 text-base"></i> Apache Spark
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-pink-500/50 transition">
+                    <i class="fa-solid fa-cubes text-pink-500 text-base"></i> dbt
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-blue-500/50 transition">
+                    <i class="fa-solid fa-wind text-blue-400 text-base"></i> Airflow
+                </div>
+                
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-emerald-500/50 transition">
+                    <i class="fa-solid fa-robot text-emerald-400 text-base"></i> Generative AI (RAG)
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-teal-500/50 transition">
+                    <i class="fa-solid fa-link text-teal-400 text-base"></i> LangChain
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-purple-500/50 transition">
+                    <i class="fa-solid fa-eye text-purple-400 text-base"></i> Vision AI (YOLO)
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-cyan-500/50 transition">
+                    <i class="fa-solid fa-diagram-project text-cyan-400 text-base"></i> MLflow
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-amber-400/50 transition">
+                    <i class="fa-solid fa-brain text-amber-400 text-base"></i> Scikit-Learn
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-yellow-400/50 transition">
+                    <i class="fa-brands fa-python text-yellow-400 text-base"></i> Python
+                </div>
 
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
-                <div>
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-bold text-sky-400 bg-sky-950 border border-sky-800/60 px-2.5 py-1 rounded">Enterprise Security & Text-to-SQL</span>
-                        <a href="https://github.com/sameerhussai230/safedata-zero-trust-agentic-pipeline" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-blue-400/50 transition">
+                    <i class="fa-solid fa-code text-blue-400 text-base"></i> SQL & T-SQL
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-sky-500/50 transition">
+                    <i class="fa-brands fa-docker text-sky-400 text-base"></i> Docker
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-yellow-500/50 transition">
+                    <i class="fa-solid fa-chart-column text-yellow-500 text-base"></i> Power BI (DAX)
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-emerald-400/50 transition">
+                    <i class="fa-solid fa-graduation-cap text-emerald-400 text-base"></i> M.Tech Systems
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-green-400/50 transition">
+                    <i class="fa-solid fa-earth-americas text-green-400 text-base"></i> Geospatial AI
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 p-3 rounded-xl flex items-center gap-2.5 text-xs font-semibold text-slate-200 hover:border-lime-400/50 transition">
+                    <i class="fa-solid fa-leaf text-lime-400 text-base"></i> ESG Analytics
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-slate-800 pb-4">
+                <h2 class="text-2xl font-bold text-slate-100 flex items-center gap-2">
+                    <i class="fa-solid fa-rocket text-sky-400"></i> Featured Engineering & Research Projects
+                </h2>
+            </div>
+
+            <div class="flex flex-wrap gap-2 border-b border-slate-800 pb-3" id="tab-buttons">
+                <button onclick="switchTab('agentic-ai')" id="tab-btn-agentic-ai" class="tab-btn active px-4 py-2 rounded-lg text-sm font-semibold transition-all border border-sky-500 bg-sky-500/20 text-sky-300">
+                    [ Agentic AI + Data ]
+                </button>
+                <button onclick="switchTab('data-databricks')" id="tab-btn-data-databricks" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all border border-slate-800 bg-slate-900 text-slate-400 hover:text-slate-200">
+                    [ Data / Databricks ]
+                </button>
+                <button onclick="switchTab('ai-geospatial')" id="tab-btn-ai-geospatial" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all border border-slate-800 bg-slate-900 text-slate-400 hover:text-slate-200">
+                    [ AI + Geospatial ]
+                </button>
+                <button onclick="switchTab('core-ml')" id="tab-btn-core-ml" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold transition-all border border-slate-800 bg-slate-900 text-slate-400 hover:text-slate-200">
+                    [ Core ML ]
+                </button>
+            </div>
+
+            <div id="tab-agentic-ai" class="tab-content space-y-8">
+                
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">1. SecureData Agentic Zero-Trust Pipeline</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Data Security, Agentic AI, LLMs, Text-to-SQL</span>
                     </div>
-                    <h3 class="text-xl font-bold mt-3 text-slate-100">SecureData Agentic Zero-Trust Pipeline</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                        Masks raw PII into a Medallion Gold DB, enabling business Text-to-SQL querying via LangChain agents while enforcing absolute LLM isolation from sensitive data.
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        An intelligent data pipeline that safely ingests sensitive enterprise data, automatically masks Personally Identifiable Information (PII) using intelligent rule-based safeguards, and empowers business users to execute natural language "Text-to-SQL" analytics. The LangChain agent operates exclusively in a sanitized Medallion "Gold" database, ensuring 100% data privacy and isolation from LLMs.
                     </p>
-                    
-                    <div class="mt-4 relative aspect-video bg-black rounded-lg overflow-hidden border border-slate-800" id="vid-safedata">
-                        <img src="https://img.youtube.com/vi/cdPImhmsELw/maxresdefault.jpg" alt="SafeData Demo" class="w-full h-full object-cover">
-                        <button onclick="playVideo('vid-safedata', 'cdPImhmsELw')" class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/20 transition">
-                            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-play"></i> Watch Demo</span>
-                        </button>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Python</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Streamlit</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">LangChain</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Groq API</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Pandas</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">SQLite</span>
                     </div>
+                    <details class="bg-slate-950 border border-slate-800 rounded-xl p-4 cursor-pointer">
+                        <summary class="text-xs font-semibold text-sky-400 hover:text-sky-300">⚙️ View System Architecture (Mermaid Flowchart)</summary>
+                        <div class="mt-4 mermaid">
+                        graph TD
+                            subgraph "Phase 1: Ingestion & Storage"
+                                A[Data Sources: Custom CSV / Generators] -->|Contains Raw PII| B[(🔴 Bronze DB: SQLite)]
+                            end
 
-                    <div class="flex flex-wrap gap-1.5 mt-4">
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">Azure</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">Databricks</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">LangChain</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">Zero-Trust</span>
+                            subgraph "Phase 2: Intelligent Masking Pipeline"
+                                B -.- C[Data Masking Agent]
+                                C -->|Validates against config.py Safeguards| D{PII Detection Engine}
+                                D -->|Masks Names, Emails, SSN, etc.| E[Sanitized Data]
+                                D -->|Preserves Dimensions & Metrics| E
+                            end
+
+                            subgraph "Phase 3: Zero-Trust Analytics"
+                                E -->|Safe Migration| F[(🟢 Gold DB: SQLite)]
+                                G[LLM: Dynamic Question Generator] <-->|Reads Schema + 1 Row| F
+                                H[Business User] -->|Clicks Suggestion / Types Query| I[LangChain SQL Agent]
+                                I <-->|Read-Only SQL Execution| F
+                                I -->|Actionable Analytics| H
+                            end
+                        </div>
+                    </details>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="https://safedata-zero-trust-agentic-pipeline-dorajpqeg5vqcrz4l2sboj.streamlit.app/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-4 py-2 rounded bg-emerald-600 hover:bg-emerald-500 text-white flex items-center gap-1.5 transition">
+                            <i class="fa-solid fa-rocket"></i> Try Live App Demo
+                        </a>
+                        <a href="https://github.com/sameerhussai230/safedata-zero-trust-agentic-pipeline/" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository
+                        </a>
                     </div>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
-                    <a href="https://safedata-zero-trust-agentic-pipeline-dorajpqeg5vqcrz4l2sboj.streamlit.app/" target="_blank" class="text-emerald-400 font-semibold hover:underline"><i class="fas fa-external-link-alt mr-1"></i> Live Streamlit App</a>
-                    <a href="https://github.com/sameerhussai230/safedata-zero-trust-agentic-pipeline" target="_blank" class="text-slate-400 hover:underline">Repository →</a>
-                </div>
-            </div>
 
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
-                <div>
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-bold text-indigo-400 bg-indigo-950 border border-indigo-800/60 px-2.5 py-1 rounded">Agentic AI & RAG</span>
-                        <a href="https://github.com/sameerhussai230/ai-sql-architect" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">2. AI SQL Architect: RAG for Complex Databases</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Generative AI, Knowledge Retrieval, NLP</span>
                     </div>
-                    <h3 class="text-xl font-bold mt-3 text-slate-100">AI SQL Architect Engine</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                        Production-grade Text-to-SQL engine utilizing RAG, LangChain, and ChromaDB vector indexers to translate complex natural language queries into efficient SQL statements.
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        A production-grade Text-to-SQL system. It uses Retrieval-Augmented Generation (RAG) to inject database schema context into the LLM, reducing hallucination and allowing users to query complex relational databases using natural language.
                     </p>
-
-                    <div class="mt-4 relative aspect-video bg-black rounded-lg overflow-hidden border border-slate-800" id="vid-aisql">
-                        <img src="https://img.youtube.com/vi/VPo-cQfsIQQ/maxresdefault.jpg" alt="AI SQL Architect Demo" class="w-full h-full object-cover">
-                        <button onclick="playVideo('vid-aisql', 'VPo-cQfsIQQ')" class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/20 transition">
-                            <span class="bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-full flex items-center gap-2"><i class="fas fa-play"></i> Watch Demo</span>
-                        </button>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">LLMs</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">LangChain</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">ChromaDB</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Azure OpenAI</span>
                     </div>
-
-                    <div class="flex flex-wrap gap-1.5 mt-4">
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">Azure OpenAI</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">LangChain</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">ChromaDB</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">Python</span>
+                    <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 max-w-2xl mx-auto">
+                        <img src="https://github.com/sameerhussai230/AI-SQL-Architect-Integrating-Large-Language-Models-and-Vector-Search/assets/85198601/4c624170-1bdb-40a6-a031-3891a487080d" alt="AI SQL Architect Architecture" class="w-full h-auto object-cover">
+                    </div>
+                    <div>
+                        <a href="https://github.com/sameerhussai230/AI-SQL-Architect-Integrating-Large-Language-Models-and-Vector-Search.git" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
                     </div>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
-                    <a href="https://github.com/sameerhussai230/ai-sql-architect" target="_blank" class="text-sky-400 font-semibold hover:underline">View Architecture & Code →</a>
-                </div>
-            </div>
 
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
-                <div>
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-bold text-emerald-400 bg-emerald-950 border border-emerald-800/60 px-2.5 py-1 rounded">EUDR Compliance & Satellite AI</span>
-                        <a href="https://github.com/sameerhussai230/ecosentinel-multispectral-eudr" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">3. EU-ETS-Grid-Carbon-Analytics: Carbon Market Correlation Engine</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Quantitative Finance, EU ETS, Energy Modeling</span>
                     </div>
-                    <h3 class="text-xl font-bold mt-3 text-slate-100">EcoSentinel: Agentic RAG & Satellite AI</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                        Geospatial framework for EU Deforestation Regulation (EUDR) compliance. Combines Sentinel-2 multi-spectral data with a LangGraph Legal RAG Agent for auditable PDF compliance audits.
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        A quantitative financial-energy analytics platform designed to forecast Carbon Price volatility. It integrates heterogeneous datasets—Physical Grid Generation (Coal/Wind/Solar) and Financial Compliance Logs (EU ETS)—to identify "structural shorts." The engine analyzes the "Merit Order" effect, calculating how renewable intermittency (e.g., Dunkelflaute events) drives fossil-fuel reliance and demand for EU Allowances (EUAs), offering specific alpha signals for commodities trading.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mt-4">
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">Sentinel-2</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">LangGraph</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">ChromaDB</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">Geospatial AI</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Python</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Streamlit</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Plotly</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Pandas</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Ember API</span>
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 max-w-3xl mx-auto">
+                        <img src="https://raw.githubusercontent.com/sameerhussai230/EU-ETS-Grid-Carbon-Analytics/main/assets/images/architecture-diagram-EU-ETS-Grid-Carbon-Analytics.png" alt="EU ETS Architecture Diagram" class="w-full h-auto object-cover">
+                    </div>
+                    <div>
+                        <a href="https://github.com/sameerhussai230/EU-ETS-Grid-Carbon-Analytics" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
                     </div>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
-                    <a href="https://github.com/sameerhussai230/ecosentinel-multispectral-eudr" target="_blank" class="text-sky-400 font-semibold hover:underline">View Repository →</a>
-                </div>
-            </div>
 
-            <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
-                <div>
-                    <div class="flex justify-between items-start">
-                        <span class="text-xs font-bold text-purple-400 bg-purple-950 border border-purple-800/60 px-2.5 py-1 rounded">Vision AI & GDPR</span>
-                        <a href="https://github.com/sameerhussai230/PrivacyVision-GDPR-Enterprise-Secure-Analytics" target="_blank" class="text-slate-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">4. PrivacyVision GDPR: Enterprise Secure Analytics</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Computer Vision, Data Privacy, GDPR Compliance</span>
                     </div>
-                    <h3 class="text-xl font-bold mt-3 text-slate-100">PrivacyVision GDPR: Video Anonymization</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed mt-2">
-                        Real-time video anonymization pipeline using YOLO11 and ByteTrack to blur faces and license plates prior to storage, fulfilling EU GDPR mandates while maintaining spatial analytics.
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        An engineered "Zero-Trust" hybrid anonymization pipeline. Unlike standard blurring, this system anonymizes video streams before storage or transmission, ensuring strict GDPR compliance while maintaining zone occupancy analytics.
                     </p>
-                    <div class="flex flex-wrap gap-1.5 mt-4">
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">YOLO11</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">ByteTrack</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">Kafka</span>
-                        <span class="bg-slate-800 text-slate-300 text-[10px] px-2 py-0.5 rounded">GDPR</span>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">YOLO11</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">ByteTrack</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Kafka</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Docker</span>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-4 items-center justify-center">
+                        <img src="https://github.com/sameerhussai230/PrivacyVision-GDPR-Enterprise-Secure-Analytics/releases/download/assests/test_video_original.gif" alt="Original Video GIF" class="rounded-xl border border-slate-800 w-full md:w-1/2 object-cover">
+                        <img src="https://github.com/sameerhussai230/PrivacyVision-GDPR-Enterprise-Secure-Analytics/releases/download/assests/privacy_vision_demo_face.gif" alt="Anonymized Video GIF" class="rounded-xl border border-slate-800 w-full md:w-1/2 object-cover">
+                    </div>
+                    <div>
+                        <a href="https://github.com/sameerhussai230/PrivacyVision-GDPR-Enterprise-Secure-Analytics/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
                     </div>
                 </div>
-                <div class="mt-6 pt-4 border-t border-slate-800 flex justify-between items-center text-xs">
-                    <a href="https://github.com/sameerhussai230/PrivacyVision-GDPR-Enterprise-Secure-Analytics" target="_blank" class="text-sky-400 font-semibold hover:underline">View Pipeline Specs →</a>
+
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">5. AI Visitor Data Extractor</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Applied AI, OCR, Automation</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        An AI-powered data entry automation system. Utilizes multimodal LLMs to extract structured data from physical ID cards and business cards with high accuracy, featuring a React frontend for human-in-the-loop validation.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Llama Vision</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">FastAPI</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">React</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Docker</span>
+                    </div>
+                    <div>
+                        <a href="https://github.com/sameerhussai230/AI-Visitor-Data-Extractor-React-FastAPI/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
+                    </div>
                 </div>
+
             </div>
 
-        </div>
-    </section>
+            <div id="tab-data-databricks" class="tab-content hidden space-y-8">
+                
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">1. Dynamic ETL Workflow: Databricks & Delta Lake</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Big Data, ETL, Lakehouse Architecture</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        A scalable Lakehouse pipeline designed for flexibility. Features parameterized notebooks for schema enforcement and automated incremental loading using Delta Lake's upsert capabilities, orchestrated via Azure Data Factory.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Azure Databricks</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">PySpark</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Delta Lake</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Azure Data Factory (ADF)</span>
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 max-w-2xl mx-auto">
+                        <img src="https://github.com/sameerhussai230/Dynamic_ETL_Workflow_with_Azure_DataBricks_Delta_Lake_and_ADF/assets/85198601/dccb148d-5846-4791-8863-be1ce68bcffa" alt="Databricks Pipeline Architecture" class="w-full h-auto object-cover">
+                    </div>
+                    <div>
+                        <a href="https://github.com/sameerhussai230/Dynamic_ETL_Workflow_with_Azure_DataBricks_Delta_Lake_and_ADF" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
+                    </div>
+                </div>
 
-    <section class="max-w-7xl mx-auto px-6 py-8">
-        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
-            <i class="fas fa-user-check text-amber-400"></i> Certifications & Academic Credentials
-        </h2>
-        <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden shadow-xl">
-            <div class="overflow-x-auto">
-                <table class="w-full text-left text-xs">
-                    <thead class="bg-slate-800/80 text-slate-400 uppercase tracking-wider">
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">2. Azure Synapse Analytics: Serverless & Spark</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Cloud Data Engineering, Big Data</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        A real-time analytics architecture utilizing Synapse Link. Optimized querying of massive NYC Taxi datasets using OpenRowSet and data pruning techniques, bridging the gap between operational NoSQL data and analytical SQL pools.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Azure Synapse</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Cosmos DB</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Serverless SQL</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Synapse Link</span>
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 max-w-2xl mx-auto">
+                        <img src="https://github.com/sameerhussai230/Unified_Data_Processing_Framework_on_Azure_Synapse/assets/85198601/c612723a-7256-4c6d-879d-93218dc44f80" alt="Azure Synapse Architecture" class="w-full h-auto object-cover">
+                    </div>
+                    <div>
+                        <a href="https://github.com/sameerhussai230/Azure-Synapse-Analytics-Integrating-Serverless-SQL-Spark-Pools-and-Synapse-Link.git" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">3. Superset Embedded Analytics with RLS</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Data Visualization, Security, Web Engineering</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        A secure embedded analytics architecture. Implemented dynamic Row-Level Security (RLS) via Superset's guest token API to enforce strict multi-tenant data segregation, ensuring users only see data relevant to their role within a single dashboard.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Apache Superset</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">FastAPI</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Docker</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Row-Level Security</span>
+                    </div>
+                    <div>
+                        <a href="https://github.com/sameerhussai230/superset-embedded-rls-portfolio" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="tab-ai-geospatial" class="tab-content hidden space-y-8">
+                
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">1. EcoSentinel: Agentic RAG & Multi-Spectral Satellite Pipeline</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Geospatial Analytics, EUDR Compliance, AI Agents, Legal RAG</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        An AI-driven geospatial framework designed for EU Deforestation Regulation (EUDR) compliance. It tasks the Sentinel-2 constellation to retrieve real-time, cloud-filtered imagery and applies a parallelized Multi-Index Decision Tree (NDVI/NDWI) to detect deforestation risks with pixel-level accuracy. The pipeline then feeds these forensic metrics into a LangGraph-powered Legal RAG Agent (backed by ChromaDB) to autonomously draft and generate PDF compliance audits referencing specific EU legal articles.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Sentinel-2</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">LangGraph</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">ChromaDB</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Planetary Computer</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Streamlit</span>
+                    </div>
+
+                    <details class="bg-slate-950 border border-slate-800 rounded-xl p-4 cursor-pointer">
+                        <summary class="text-xs font-semibold text-sky-400 hover:text-sky-300">⚙️ View System Architecture (Mermaid Diagram)</summary>
+                        <div class="mt-4 mermaid">
+                        graph TD
+                            User[User Input: Region & Date] -->|Trigger| App[Streamlit Interface]
+                            
+                            subgraph "Data Acquisition Layer"
+                                App -->|Query| STAC[Microsoft Planetary Computer]
+                                STAC -->|Download L2A| Raw[Raw Satellite Bands]
+                            end
+                            
+                            subgraph "Processing Core"
+                                Raw -->|ThreadPool| Process[WaterStressAnalyzer]
+                                Process -->|Calc Indices| NDVI[Vegetation Health]
+                                Process -->|Calc Indices| Stress[Stress Index]
+                                Stress -->|JSON Stats| Metrics[Forensic Metrics]
+                            end
+                            
+                            subgraph "Legal Intelligence Agent"
+                                Metrics -->|Input| Agent[LangGraph Agent]
+                                KB[(ChromaDB: EUDR Laws)] -->|Retrieve Context| Agent
+                                Agent -->|LLM Inference| Draft[Legal Verdict]
+                            end
+                            
+                            subgraph "Reporting Layer"
+                                Draft -->|Format| PDF[PDF Report Generator]
+                                Process -->|HighRes Img| PDF
+                                PDF -->|Download| Final[Forensic Audit Report.pdf]
+                            end
+                        </div>
+                    </details>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        <img src="https://github.com/sameerhussai230/ecosentinel-multispectral-eudr/blob/main/gif/presets_values_amazon.gif?raw=true" alt="Amazon Risk Analysis" class="rounded-xl border border-slate-800 w-full object-cover">
+                        <img src="https://github.com/sameerhussai230/ecosentinel-multispectral-eudr/blob/main/gif/Draw_any_region_gloabaly.gif?raw=true" alt="Interactive Region Drawing" class="rounded-xl border border-slate-800 w-full object-cover">
+                    </div>
+
+                    <div>
+                        <a href="https://github.com/sameerhussai230/ecosentinel-multispectral-eudr/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="tab-core-ml" class="tab-content hidden space-y-8">
+                
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">1. Analysis of Particulate Matter Levels in Delhi</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Environmental Science, Statistical Modeling</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        A domain-specific environmental study analyzing particulate matter levels (PM2.5 and PM10). Validated high-frequency air pollution data against public meteorological records using statistical smoothing and SARIMA forecasting to accurately model seasonal trends and pollutant variations in New Delhi.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Python (Pandas)</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">SARIMA</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Statistical Smoothing</span>
+                    </div>
+                    <div>
+                        <a href="https://github.com/sameerhussai230/Analysis-of-PM-10-and-2.5-Levels_in_Delhi" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="space-y-6">
+            <h2 class="text-2xl font-bold text-slate-100 text-center flex items-center justify-center gap-2">
+                <i class="fa-solid fa-award text-sky-400"></i> Certifications & Achievements
+            </h2>
+
+            <div class="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900/40">
+                <table class="w-full text-left text-sm text-slate-300">
+                    <thead class="bg-slate-900 text-xs uppercase text-slate-400 border-b border-slate-800">
                         <tr>
-                            <th class="py-3.5 px-5">Credential</th>
-                            <th class="py-3.5 px-5">Issuer</th>
-                            <th class="py-3.5 px-5 text-right">Verification Link</th>
+                            <th scope="col" class="px-6 py-4">Credential</th>
+                            <th scope="col" class="px-6 py-4">Issuer</th>
+                            <th scope="col" class="px-6 py-4 text-right">Verification</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-slate-800 text-slate-300">
-                        <tr>
-                            <td class="py-3.5 px-5 font-semibold text-slate-100">Fabric Data Engineer Associate (DP-700)</td>
-                            <td class="py-3.5 px-5 text-slate-400">Microsoft</td>
-                            <td class="py-3.5 px-5 text-right"><a href="https://learn.microsoft.com/api/credentials/share/en-us/SameerHussain-8342/2193B2C5213FB4AE?sharingId=FE748C0090AA8519" target="_blank" class="text-sky-400 hover:underline">Verify Badge ↗</a></td>
+                    <tbody class="divide-y divide-slate-800">
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">Qualified GATE Exam 2021 (AIR 596)</td>
+                            <td class="px-6 py-4 text-slate-400">Indian Institute of Technology (IIT)</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://drive.google.com/file/d/1U89Us8Pl8KIkv8TgIqzAIlhJHowPimLq/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    View Scorecard <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
                         </tr>
-                        <tr>
-                            <td class="py-3.5 px-5 font-semibold text-slate-100">Azure Data Engineer Associate (DP-203)</td>
-                            <td class="py-3.5 px-5 text-slate-400">Microsoft</td>
-                            <td class="py-3.5 px-5 text-right"><a href="https://learn.microsoft.com/api/credentials/share/en-us/SameerHussain-0791/A90E708B216BDEA1?sharingId=1784BD790935F261" target="_blank" class="text-sky-400 hover:underline">Verify Badge ↗</a></td>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">Microsoft Certified: Fabric Data Engineer (DP-700)</td>
+                            <td class="px-6 py-4 text-slate-400">Microsoft</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://learn.microsoft.com/api/credentials/share/en-us/SameerHussain-8342/2193B2C5213FB4AE?sharingId=FE748C0090AA8519" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
                         </tr>
-                        <tr>
-                            <td class="py-3.5 px-5 font-semibold text-slate-100">Power BI Data Analyst Associate (PL-300)</td>
-                            <td class="py-3.5 px-5 text-slate-400">Microsoft</td>
-                            <td class="py-3.5 px-5 text-right"><a href="https://learn.microsoft.com/api/credentials/share/en-us/SameerHussain-0791/7AE4E19D0BE811EC?sharingId=1784BD790935F261" target="_blank" class="text-sky-400 hover:underline">Verify Badge ↗</a></td>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">Microsoft Certified: Azure Data Engineer (DP-203)</td>
+                            <td class="px-6 py-4 text-slate-400">Microsoft</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://learn.microsoft.com/api/credentials/share/en-us/SameerHussain-0791/A90E708B216BDEA1?sharingId=1784BD790935F261" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
                         </tr>
-                        <tr>
-                            <td class="py-3.5 px-5 font-semibold text-slate-100">GATE Exam 2021 (All India Rank 596)</td>
-                            <td class="py-3.5 px-5 text-slate-400">IIT</td>
-                            <td class="py-3.5 px-5 text-right"><a href="https://drive.google.com/file/d/1U89Us8Pl8KIkv8TgIqzAIlhJHowPimLq/view" target="_blank" class="text-sky-400 hover:underline">Scorecard ↗</a></td>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">Microsoft Certified: Power BI Data Analyst (PL-300)</td>
+                            <td class="px-6 py-4 text-slate-400">Microsoft</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://learn.microsoft.com/api/credentials/share/en-us/SameerHussain-0791/7AE4E19D0BE811EC?sharingId=1784BD790935F261" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">Fundamentals of GIS</td>
+                            <td class="px-6 py-4 text-slate-400">UC Davis (Coursera)</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://www.coursera.org/account/accomplishments/verify/62NTF2E5ZHVV" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">AI For Everyone</td>
+                            <td class="px-6 py-4 text-slate-400">DeepLearning.AI (Andrew Ng)</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://www.coursera.org/account/accomplishments/verify/SKH1XA5C954W" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">Python for Time Series Data Analysis</td>
+                            <td class="px-6 py-4 text-slate-400">Udemy</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://www.udemy.com/certificate/UC-aae3d3f5-0763-4141-a40f-85e3c3fbd31c/" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">Azure Databricks & Spark for Data Engineers</td>
+                            <td class="px-6 py-4 text-slate-400">Udemy</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://www.udemy.com/certificate/UC-6225053b-c750-4b0f-aad6-146b6b5687ff/" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">Databases and SQL for Data Science</td>
+                            <td class="px-6 py-4 text-slate-400">IBM</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://www.coursera.org/account/accomplishments/verify/GQHP4V5EL3GC" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="px-6 py-4 font-semibold text-white">IELTS Academic - Band 7.0 (CEFR Level C1)</td>
+                            <td class="px-6 py-4 text-slate-400">British Council / IDP</td>
+                            <td class="px-6 py-4 text-right">
+                                <a href="https://drive.google.com/file/d/1WGPT2M9zLLj1Tqu_TgT1RRbs5yLfwg_f/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-sky-400 hover:underline inline-flex items-center gap-1 font-medium text-xs">
+                                    Verify <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="border-t border-slate-800 bg-slate-900/60 py-12 mt-12 text-center text-slate-400">
-        <div class="max-w-7xl mx-auto px-6 space-y-4">
-            <h3 class="text-xl font-bold text-slate-100">Interested in scalable, compliant AI & Data Platforms?</h3>
-            <p class="text-xs max-w-lg mx-auto text-slate-400">Collaborating on distributed enterprise systems across US and EMEA operational hours.</p>
-            <div class="pt-2 flex justify-center gap-4">
-                <a href="mailto:sameerhussain230@gmail.com" class="bg-sky-600 hover:bg-sky-500 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition">
-                    Email Direct
-                </a>
-                <a href="https://www.linkedin.com/in/hussainsameer/" target="_blank" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-white text-xs font-semibold px-5 py-2.5 rounded-xl transition">
-                    LinkedIn Profile
-                </a>
-            </div>
-            <p class="text-[10px] text-slate-600 pt-6">© Sameer Hussain • Hosted on GitHub Pages</p>
-        </div>
+    </main>
+
+    <footer class="border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+        <p>© 2026 Sameer Hussain. All rights reserved.</p>
     </footer>
 
     <script>
-        function playVideo(elementId, youtubeId) {
-            document.getElementById(elementId).innerHTML = `
-                <iframe src="https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0" 
-                        class="w-full h-full border-0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                </iframe>
-            `;
+        function switchTab(tabId) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Remove active classes from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('border-sky-500', 'bg-sky-500/20', 'text-sky-300');
+                btn.classList.add('border-slate-800', 'bg-slate-900', 'text-slate-400');
+            });
+
+            // Show current tab content
+            const activeTab = document.getElementById('tab-' + tabId);
+            if (activeTab) {
+                activeTab.classList.remove('hidden');
+            }
+
+            // Highlight selected tab button
+            const activeBtn = document.getElementById('tab-btn-' + tabId);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-slate-800', 'bg-slate-900', 'text-slate-400');
+                activeBtn.classList.add('border-sky-500', 'bg-sky-500/20', 'text-sky-300');
+            }
         }
     </script>
 </body>
