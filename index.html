@@ -31,6 +31,8 @@
     </script>
     <style>
         body { font-family: 'Inter', sans-serif; }
+        /* Custom video styling to fit dark theme nicely */
+        video { outline: none; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-sky-500 selection:text-white">
@@ -219,12 +221,15 @@
                         </div>
                     </details>
 
-                    <!-- Embedded Demo Video Container (YouTube Embed) -->
+                    <!-- Native HTML5 Video Player -->
                     <div class="space-y-2">
                         <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">📺 Playable Demo Walkthrough</h4>
-                        <div class="relative w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950 aspect-video">
-                            <!-- Replace with your actual YouTube Video ID -->
-                            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="SecureData Zero-Trust Pipeline Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="relative w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950">
+                            <!-- Update the src="" below to the path/link of your SecureData Video -->
+                            <video class="w-full aspect-video rounded-xl shadow-lg" controls preload="metadata" playsinline>
+                                <source src="YOUR_SECUREDATA_VIDEO.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
 
@@ -263,12 +268,15 @@
                         </div>
                     </details>
 
-                    <!-- Playable Video Container -->
+                    <!-- Native HTML5 Video Player -->
                     <div class="space-y-2">
                         <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">📺 Playable Demo Walkthrough</h4>
-                        <div class="relative w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950 aspect-video">
-                            <!-- Replace with your actual YouTube Video ID -->
-                            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="AI SQL Architect Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <div class="relative w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950">
+                            <!-- Update the src="" below to the path/link of your AI SQL Architect Video -->
+                            <video class="w-full aspect-video rounded-xl shadow-lg" controls preload="metadata" playsinline>
+                                <source src="YOUR_AISQL_VIDEO.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
                     </div>
 
