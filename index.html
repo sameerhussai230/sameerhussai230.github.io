@@ -1,4 +1,3 @@
-<!-- START OF FILE index.html -->
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
 <head>
@@ -34,11 +33,11 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         
-        /* PREVENT MERMAID RAW TEXT FLASH (FOUC) */
+        /* PREVENT MERMAID RAW TEXT FLASH (FOUC) ON GITHUB PAGES */
         .mermaid:not([data-processed="true"]) {
             opacity: 0;
             visibility: hidden;
-            height: 150px; /* Placeholder height so layout doesn't jump */
+            height: 150px; 
             overflow: hidden;
         }
     </style>
@@ -75,7 +74,7 @@
                 Senior Data Scientist, AI Architect & Data Engineering Technical Lead
             </p>
             <p class="text-slate-400 leading-relaxed text-base sm:text-lg">
-                Architecting modern foundations for Data Warehousing, Generative AI, and Net-Zero Intelligence. Specializing in petabyte-scale lakehouses with <span class="text-slate-200 font-semibold">Azure Fabric, Databricks, and Snowflake</span>, alongside <span class="text-slate-200 font-semibold">Generative AI (RAG & Agentic Workflows)</span>, <span class="text-slate-200 font-semibold">Vision AI (YOLO)</span>, and <span class="text-slate-200 font-semibold">Geospatial Analytics</span>.
+                Architecting the digital backbone for Modern Data Warehousing, Generative AI, and Net-Zero Intelligence. Specializing in petabyte-scale lakehouses with <span class="text-slate-200 font-semibold">Azure Fabric, Databricks, and Snowflake</span>, alongside <span class="text-slate-200 font-semibold">Generative AI (RAG & Agentic Workflows)</span>, <span class="text-slate-200 font-semibold">Vision AI (YOLO)</span>, and <span class="text-slate-200 font-semibold">Geospatial Analytics</span>.
             </p>
             <div class="flex flex-wrap justify-center gap-4 pt-2">
                 <a href="https://www.linkedin.com/in/hussainsameer/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-sky-600 hover:bg-sky-500 text-white font-medium text-sm transition-all shadow-lg shadow-sky-600/25">
@@ -183,12 +182,11 @@
                 <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
                         <h3 class="text-xl font-bold text-white">1. SecureData Agentic Zero-Trust Pipeline</h3>
-                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Data Security, Agentic AI, LLMs, Text-to-SQL Analytics</span>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Data Security, Agentic AI, LLMs, Text-to-SQL</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        An intelligent data pipeline designed to ingest sensitive enterprise data securely. The framework automatically masks Personally Identifiable Information (PII) using rule-based safeguards, enabling stakeholders to execute natural language "Text-to-SQL" analytics safely. The LangChain agent queries a sanitized Medallion "Gold" database, enforcing strict logical isolation from public LLM models.
+                        An intelligent data pipeline that safely ingests sensitive enterprise data, automatically masks Personally Identifiable Information (PII) using intelligent rule-based safeguards, and empowers business users to execute natural language "Text-to-SQL" analytics. The LangChain agent operates exclusively in a sanitized Medallion "Gold" database, ensuring 100% data privacy and isolation from LLMs.
                     </p>
-                    
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Python</span>
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Streamlit</span>
@@ -198,7 +196,7 @@
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">SQLite</span>
                     </div>
 
-                    <!-- Interactive Architecture Block -->
+                    <!-- Mermaid Flowchart -->
                     <details class="bg-slate-950 border border-slate-800 rounded-xl p-4 cursor-pointer">
                         <summary class="text-xs font-semibold text-sky-400 hover:text-sky-300">⚙️ View System Architecture (Mermaid Flowchart)</summary>
                         <div class="mt-4 mermaid flex justify-center">
@@ -229,11 +227,10 @@
                         </div>
                     </details>
 
-                    <!-- Embedded Demo Video Container (YouTube Embed) -->
+                    <!-- Responsive YouTube Embed Block -->
                     <div class="space-y-2">
                         <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">📺 Playable Demo Walkthrough</h4>
                         <div class="relative w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950 aspect-video shadow-lg">
-                            <!-- Lazy-loaded iframe for extreme performance boost -->
                             <iframe class="absolute top-0 left-0 w-full h-full" 
                                     src="https://www.youtube.com/embed/P-Z8i8z0o-E" 
                                     title="SecureData Zero-Trust Pipeline Demo" 
@@ -262,9 +259,8 @@
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Generative AI, Knowledge Retrieval, NLP</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        A production-grade Text-to-SQL environment. The architecture implements Retrieval-Augmented Generation (RAG) concepts to inject structural database schema context directly into LLM prompts, decreasing hallucinations and translating natural language inputs into optimized SQL statements.
+                        A production-grade Text-to-SQL system. It uses Retrieval-Augmented Generation (RAG) to inject database schema context into the LLM, reducing hallucination and allowing users to query complex relational databases using natural language.
                     </p>
-                    
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">LLMs</span>
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">LangChain</span>
@@ -280,15 +276,14 @@
                         </div>
                     </details>
 
-                    <!-- Embedded Demo Video Container (YouTube Embed) -->
+                    <!-- Responsive YouTube Embed Block -->
                     <div class="space-y-2">
                         <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">📺 Playable Demo Walkthrough</h4>
                         <div class="relative w-full overflow-hidden rounded-xl border border-slate-800 bg-slate-950 aspect-video shadow-lg">
-                            <!-- Lazy-loaded iframe -->
                             <iframe class="absolute top-0 left-0 w-full h-full" 
                                     src="https://www.youtube.com/embed/kFk-oFvB6Zc" 
                                     title="AI SQL Architect Demo" 
-                                    frameborder="0" 
+                                    frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                     allowfullscreen
                                     loading="lazy">
@@ -303,23 +298,46 @@
                     </div>
                 </div>
 
-                <!-- Project 3: PrivacyVision -->
+                <!-- Project 3: EU-ETS-Grid-Carbon-Analytics -->
                 <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-xl font-bold text-white">3. PrivacyVision GDPR: Enterprise Secure Analytics</h3>
+                        <h3 class="text-xl font-bold text-white">3. EU-ETS-Grid-Carbon-Analytics: Carbon Market Engine</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Quantitative Finance, EU ETS, Energy Modeling</span>
+                    </div>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        A quantitative financial-energy analytics platform designed to forecast Carbon Price volatility. It integrates heterogeneous datasets—Physical Grid Generation (Coal/Wind/Solar) and Financial Compliance Logs (EU ETS)—to identify "structural shorts." The engine analyzes the "Merit Order" effect, calculating how renewable intermittency (e.g., Dunkelflaute events) drives fossil-fuel reliance and demand for EU Allowances (EUAs), offering specific alpha signals for commodities trading.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Python</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Streamlit</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Plotly</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Pandas</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Ember API</span>
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 max-w-3xl mx-auto flex justify-center p-2">
+                        <img src="https://raw.githubusercontent.com/sameerhussai230/EU-ETS-Grid-Carbon-Analytics/main/assets/images/architecture-diagram-EU-ETS-Grid-Carbon-Analytics.png" alt="EU ETS Architecture Diagram" class="w-full h-auto object-cover rounded-lg" loading="lazy">
+                    </div>
+                    <div>
+                        <a href="https://github.com/sameerhussai230/EU-ETS-Grid-Carbon-Analytics" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: PrivacyVision GDPR -->
+                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
+                        <h3 class="text-xl font-bold text-white">4. PrivacyVision GDPR: Enterprise Secure Analytics</h3>
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Computer Vision, Data Privacy, GDPR Compliance</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        A real-time hybrid anonymization system. Designed to redact private fields in dynamic video feeds prior to file storage or network transit, maintaining legal GDPR compliance while enabling occupancy and motion-zone analytics.
+                        An engineered "Zero-Trust" hybrid anonymization pipeline. Unlike standard blurring, this system anonymizes video streams before storage or transmission, ensuring strict GDPR compliance while maintaining zone occupancy analytics.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">YOLO11</span>
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">ByteTrack</span>
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Kafka</span>
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Docker</span>
-                    </div>
-                    <div class="flex justify-center p-4 bg-slate-950 rounded-xl border border-slate-800">
-                        <img src="https://raw.githubusercontent.com/sameerhussai230/PrivacyVision-GDPR-Enterprise_Secure_Analytics/main/PrivacyVision_GDPR.svg" alt="PrivacyVision Architecture" class="w-full md:w-3/4 object-cover" loading="lazy">
                     </div>
                     <div class="flex flex-col md:flex-row gap-4 items-center justify-center pt-2">
                         <img src="https://github.com/sameerhussai230/PrivacyVision-GDPR-Enterprise-Secure-Analytics/releases/download/assests/test_video_original.gif" alt="Original Video GIF" class="rounded-xl border border-slate-800 w-full md:w-1/2 object-cover" loading="lazy">
@@ -332,14 +350,14 @@
                     </div>
                 </div>
 
-                <!-- Project 4: Visitor Data Extractor -->
+                <!-- Project 5: Visitor Data Extractor -->
                 <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-xl font-bold text-white">4. AI Visitor Data Extractor</h3>
+                        <h3 class="text-xl font-bold text-white">5. AI Visitor Data Extractor</h3>
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Applied AI, OCR, Automation</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        An AI-assisted data acquisition tool designed to digitize visitor ledgers and business cards. Employs multimodal Llama Vision instances via FastAPI to read structured fields from raw uploads, with a side-by-side verification interface constructed in React.
+                        An AI-powered data entry automation system. Utilizes multimodal LLMs to extract structured data from physical ID cards and business cards with high accuracy, featuring a React frontend for human-in-the-loop validation.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Llama Vision</span>
@@ -364,14 +382,13 @@
             <!-- TAB 2: Data / Databricks -->
             <div id="tab-data-databricks" class="tab-content hidden space-y-8">
                 
-                <!-- Project 1 -->
                 <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
                         <h3 class="text-xl font-bold text-white">1. Dynamic ETL Workflow: Databricks & Delta Lake</h3>
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Big Data, ETL, Lakehouse Architecture</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        A parameterized Lakehouse engineering framework. Utilizes Databricks compute layers with automated schema enforcement, processing high-volume transactional sources through Bronze, Silver, and Gold Delta layers managed within Azure Data Factory.
+                        A scalable Lakehouse pipeline designed for flexibility. Features parameterized notebooks for schema enforcement and automated incremental loading using Delta Lake's upsert capabilities, orchestrated via Azure Data Factory.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Azure Databricks</span>
@@ -389,14 +406,13 @@
                     </div>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
                         <h3 class="text-xl font-bold text-white">2. Azure Synapse Analytics: Serverless & Spark</h3>
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Cloud Data Engineering, Big Data</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        A real-time analytics bridge linking hot Operational stores and cold Analytical engines. Configured OpenRowSet architectures over multi-million row NYC taxi points using Azure Synapse Link and Cosmos DB.
+                        A real-time analytics architecture utilizing Synapse Link. Optimized querying of massive NYC Taxi datasets using OpenRowSet and data pruning techniques, bridging the gap between operational NoSQL data and analytical SQL pools.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Azure Synapse</span>
@@ -414,40 +430,13 @@
                     </div>
                 </div>
 
-                <!-- Project 3 -->
                 <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-xl font-bold text-white">3. EU-ETS-Grid-Carbon-Analytics</h3>
-                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Quantitative Finance, Carbon Markets, Energy Systems Modeling</span>
-                    </div>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        A quantitative financial-energy analytical engine. Associates dynamic electrical grids (coal, solar, and wind yields) with regulatory compliance tracking systems (EU ETS) to study historical carbon price movements and structural energy shifts.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Python</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Streamlit</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Plotly</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Pandas</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Ember API</span>
-                    </div>
-                    <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 max-w-3xl mx-auto flex justify-center p-2">
-                        <img src="https://raw.githubusercontent.com/sameerhussai230/EU-ETS-Grid-Carbon-Analytics/main/assets/images/architecture-diagram-EU-ETS-Grid-Carbon-Analytics.png" alt="EU ETS Architecture Diagram" class="w-full h-auto object-cover rounded-lg" loading="lazy">
-                    </div>
-                    <div>
-                        <a href="https://github.com/sameerhussai230/EU-ETS-Grid-Carbon-Analytics" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
-                            <i class="fa-brands fa-github"></i> View Full Repository & Documentation
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
-                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-xl font-bold text-white">4. Superset Embedded Analytics with RLS</h3>
+                        <h3 class="text-xl font-bold text-white">3. Superset Embedded Analytics with RLS</h3>
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Data Visualization, Security, Web Engineering</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        A role-based embedded visualization design. Leverages Apache Superset Guest Token APIs alongside FastAPI services to execute Row-Level Security (RLS) dynamically, establishing secure data access structures for multi-tenant users.
+                        A secure embedded analytics architecture. Implemented dynamic Row-Level Security (RLS) via Superset's guest token API to enforce strict multi-tenant data segregation, ensuring users only see data relevant to their role within a single dashboard.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Apache Superset</span>
@@ -460,7 +449,7 @@
                         <img src="https://github.com/user-attachments/assets/0abd3412-bd8c-40d3-8fd4-984bb7212e17" alt="Superset RLS Embedded Demo" class="w-full h-auto object-cover rounded-lg" loading="lazy">
                     </div>
 
-                    <!-- Sandbox Credentials Callout -->
+                    <!-- Sandbox Credentials Callout (Restored) -->
                     <div class="bg-slate-950/80 border border-slate-800 p-4 rounded-xl space-y-2">
                         <h4 class="text-xs font-semibold text-sky-400 flex items-center gap-1.5">
                             <i class="fa-solid fa-key"></i> Demo Credentials Setup
@@ -489,14 +478,13 @@
             <!-- TAB 3: AI + Geospatial -->
             <div id="tab-ai-geospatial" class="tab-content hidden space-y-8">
                 
-                <!-- Project 1 -->
                 <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
                         <h3 class="text-xl font-bold text-white">1. EcoSentinel: Agentic RAG & Multi-Spectral Satellite Pipeline</h3>
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Geospatial Analytics, EUDR Compliance, AI Agents, Legal RAG</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        A geospatial pipeline designed to monitor environmental compliance with Regulation (EU) 2023/1115 (EUDR). Integrates Sentinel-2 satellite imagery through the Microsoft Planetary Computer API, calculating multi-spectral indices (NDVI/NDWI) to monitor forest changes. These indices feed into a LangGraph RAG Agent that parses compliance rules to draft structured audit reports.
+                        An AI-driven geospatial framework designed for EU Deforestation Regulation (EUDR) compliance. It tasks the Sentinel-2 constellation to retrieve real-time, cloud-filtered imagery and applies a parallelized Multi-Index Decision Tree (NDVI/NDWI) to detect deforestation risks with pixel-level accuracy. The pipeline then feeds these forensic metrics into a LangGraph-powered Legal RAG Agent (backed by ChromaDB) to autonomously draft and generate PDF compliance audits referencing specific EU legal articles.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Sentinel-2</span>
@@ -506,7 +494,6 @@
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Streamlit</span>
                     </div>
 
-                    <!-- Architecture Diagram -->
                     <details class="bg-slate-950 border border-slate-800 rounded-xl p-4 cursor-pointer">
                         <summary class="text-xs font-semibold text-sky-400 hover:text-sky-300">⚙️ View System Architecture (Mermaid Diagram)</summary>
                         <div class="mt-4 mermaid flex justify-center">
@@ -539,19 +526,17 @@
                         </div>
                     </details>
 
-                    <!-- Interactive Mode Visualizations -->
-                    <div class="space-y-4">
+                    <!-- Interactive Mode Visualizations (Restored 3-grid layout) -->
+                    <div class="space-y-4 pt-2">
                         <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">🛠️ Multi-Modal Target Control Modes</h4>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            <!-- Mode 1 -->
                             <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 space-y-2">
                                 <span class="text-[10px] text-sky-400 font-semibold uppercase tracking-wider block">1. Preset Regional Hubs</span>
                                 <div class="rounded-lg overflow-hidden border border-slate-800 aspect-video">
                                     <img src="https://github.com/sameerhussai230/ecosentinel-multispectral-eudr/blob/main/gif/presets_values_amazon.gif?raw=true" alt="Presets mode visual" class="w-full h-full object-cover" loading="lazy">
                                 </div>
-                                <p class="text-slate-400 text-xs leading-relaxed">Direct telemetry evaluations covering verified target ecosystems (e.g. Amazon Rainforest, Bordeaux).</p>
+                                <p class="text-slate-400 text-xs leading-relaxed">Direct telemetry evaluations covering verified target ecosystems (e.g. Amazon Rainforest).</p>
                             </div>
-                            <!-- Mode 2 -->
                             <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 space-y-2">
                                 <span class="text-[10px] text-teal-400 font-semibold uppercase tracking-wider block">2. Global Geocoding Queries</span>
                                 <div class="rounded-lg overflow-hidden border border-slate-800 aspect-video">
@@ -559,7 +544,6 @@
                                 </div>
                                 <p class="text-slate-400 text-xs leading-relaxed">Translates free-form geographic queries into bounded raster searches covering a 10km radius.</p>
                             </div>
-                            <!-- Mode 3 -->
                             <div class="bg-slate-950 border border-slate-800 rounded-xl p-3 space-y-2">
                                 <span class="text-[10px] text-emerald-400 font-semibold uppercase tracking-wider block">3. Vector Area Plotting</span>
                                 <div class="rounded-lg overflow-hidden border border-slate-800 aspect-video">
@@ -582,21 +566,20 @@
             <!-- TAB 4: Core ML -->
             <div id="tab-core-ml" class="tab-content hidden space-y-8">
                 
-                <!-- Project 1 -->
                 <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
                         <h3 class="text-xl font-bold text-white">1. Analysis of Particulate Matter Levels in Delhi</h3>
                         <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Environmental Science, Statistical Modeling</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        A multi-year environmental evaluation assessing PM2.5 and PM10 variations. Models seasonal deviations, weather dynamics, and pollution variations across Indian metropolitan corridors using statistical smoothing, SARIMA forecasting, and CPCB observation networks.
+                        A domain-specific environmental study analyzing particulate matter levels (PM2.5 and PM10). Validated high-frequency air pollution data against public meteorological records using statistical smoothing and SARIMA forecasting to accurately model seasonal trends and pollutant variations in New Delhi.
                     </p>
                     <div class="flex flex-wrap gap-2">
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Python (Pandas)</span>
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">SARIMA</span>
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Statistical Smoothing</span>
                     </div>
-
+                    
                     <div class="rounded-xl overflow-hidden border border-slate-800 bg-slate-950 max-w-2xl mx-auto flex justify-center p-2">
                         <img src="https://github.com/sameerhussai230/Analysis-of-PM-10-and-2.5-Levels_in_Delhi/blob/main/Analysis_of_Particulate_Matter.gif?raw=true" alt="Air pollution dynamics visual" class="w-full h-auto object-cover rounded-lg" loading="lazy">
                     </div>
@@ -758,4 +741,3 @@
     </script>
 </body>
 </html>
-<!-- END OF FILE index.html -->
