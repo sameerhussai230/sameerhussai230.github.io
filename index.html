@@ -481,11 +481,12 @@
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Streamlit</span>
                     </div>
 
+                  <!-- Architecture Diagram -->
                     <details class="bg-slate-950 border border-slate-800 rounded-xl p-4 cursor-pointer">
                         <summary class="text-xs font-semibold text-sky-400 hover:text-sky-300">⚙️ View System Architecture (Mermaid Diagram)</summary>
                         <div class="mt-4 mermaid flex justify-center">
                         graph TD
-                            User[User Input: Region & Date] -->|Trigger| App[Streamlit Interface]
+                            User[User Input: Region and Date] -->|Trigger| App[Streamlit Interface]
                             
                             subgraph "Data Acquisition Layer"
                                 App -->|Query| STAC[Microsoft Planetary Computer]
