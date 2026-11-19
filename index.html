@@ -246,46 +246,53 @@
             <!-- TAB 1: Agentic AI + Data -->
             <div id="tab-agentic-ai" class="tab-content space-y-8">
 
-                <!-- Project 1: Agentic Order Processing System -->
+             
+<!-- Project 1: Multi-Agent Order Processing -->
                 <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-6 hover:border-slate-700 transition space-y-4">
                     <div class="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                        <h3 class="text-xl font-bold text-white">1. Agentic Order Processing System</h3>
-                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Agentic AI, ERP Integration, HITL, Observability</span>
+                        <h3 class="text-xl font-bold text-white">1. Multi-Agent Order Processing</h3>
+                        <span class="text-xs px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700 self-start md:self-auto">Microsoft Foundry, Dynamics 365 ERP, Guardrails, Lineage & Audit</span>
                     </div>
                     <p class="text-slate-300 text-sm leading-relaxed">
-                        An AI-driven Agentic workflow for automating unstructured order ingestion. Powered by LangGraph and Groq LLMs, this system dynamically extracts order parameters from raw customer emails, performs real-time inventory and customer validation against Microsoft Dynamics 365 Business Central, and routes exceptions to a Human-in-the-Loop (HITL) triage interface. Full execution observability is maintained via Langfuse alongside a persistent SQLite audit log for central governance.
+                        An enterprise multi-agent order automation system built on Microsoft Foundry and Dynamics 365 Business Central. Upon receiving an unstructured customer order email, deterministic pre-flight guardrails validate the input before a Sales Intake Agent verifies customer status and live ERP stock—automatically creating a sales order if inventory is sufficient, or handing off to a Procurement Agent to raise a purchase order for the exact shortage. Exceptions, blocked entities, and prompt-injection attempts are routed to a Human Triage Queue with plain-English diagnostics, while every execution step is recorded in a SQLite audit log with full end-to-end data lineage and replay capabilities.
                     </p>
                     <div class="flex flex-wrap gap-2">
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">LangGraph</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Groq LLM (Llama 3.1)</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Dynamics 365</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">MSAL OAuth</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Microsoft Foundry</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Dynamics 365 Business Central</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">GPT-4.1-mini</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Azure Functions (MCP)</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">MSAL OAuth 2.0</span>
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Streamlit</span>
-                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">Langfuse</span>
                         <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">SQLite</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-sky-950 text-sky-400 border border-sky-800">OpenTelemetry</span>
                     </div>
 
                     <!-- Mermaid Flowchart -->
                     <details class="bg-slate-950 border border-slate-800 rounded-xl p-4 cursor-pointer">
                         <summary class="text-xs font-semibold text-sky-400 hover:text-sky-300">⚙️ View System Architecture (Mermaid Flowchart)</summary>
                         <div class="mt-4 mermaid flex justify-center w-full">
-                        graph TD
-                            A[Incoming Customer Email] --> B(LangGraph Orchestrator)
-                            B --> C{Groq LLM Extraction}
-                            C --> D[Extract: Customer ID, Item, Qty]
-                            
-                            D --> E{"Business Central API Validation"}
-                            
-                            E -- Customer & Item Valid, In Stock --> F[Execute Order via REST API]
-                            E -- Validation Failed --> G((State Interrupt: Human Triage))
-                            
-                            G -- Manager Approves Override --> E
-                            G -- Manager Rejects Order --> L[(SQLite Governance DB)]
-                            
-                            F --> I[Order ID Generated]
-                            I --> L
-                            
-                            B -. Traces, Latency & Prompts .-> J[(Langfuse Observability)]
+                        flowchart LR
+                          A["📧 Customer email"] --> B["🛡️ Pre-flight checks"]
+                          B -->|valid| C["🤖 Sales Intake Agent (Foundry)"]
+                          B -->|invalid| T["🧑‍⚖️ Human triage queue"]
+                          C -->|"check_customer + check_inventory"| BC[("Dynamics 365 Business Central")]
+                          C --> D{"⚖️ Stock sufficient?"}
+                          D -->|yes| E["✅ Sales order"]
+                          D -->|no| F["🤖 Procurement Agent (Foundry)"]
+                          F -->|"check_inventory + create_purchase_order"| BC
+                          F --> G["📦 Purchase order for the shortage"]
+                          C -->|"unknown / blocked customer or item"| T
+                          C -->|"guardrail block or agent error"| T
+                          F -->|"PO failed or blocked"| T
+                          E --> L[("🗄️ SQLite audit log + lineage")]
+                          G --> L
+                          T --> L
+                          classDef agent fill:#E8F0FE,stroke:#1A73E8,color:#202124
+                          classDef good fill:#E6F4EA,stroke:#2E7D32,color:#202124
+                          classDef triage fill:#FFF4E0,stroke:#EF6C00,color:#202124
+                          class C,F agent
+                          class E,G good
+                          class T triage
                         </div>
                     </details>
 
@@ -293,11 +300,10 @@
                     <div class="mt-4 flex flex-col items-center space-y-3">
                         <h4 class="text-sm font-bold text-slate-300">📺 Playable Demo Walkthrough</h4>
                         <div class="w-full max-w-2xl aspect-video rounded-xl overflow-hidden border border-slate-800 shadow-lg bg-slate-950">
-                            
                             <iframe 
                                 class="w-full h-full" 
-                                src="https://www.youtube.com/watch?v=bB50z1cjoiY.mp4" 
-                                title="Agentic Order Processing System Demo" 
+                                src="https://www.youtube.com/embed/ECrHzK-Wen4" 
+                                title="Multi-Agent Order Processing Demo" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                 referrerpolicy="strict-origin-when-cross-origin"
@@ -307,8 +313,8 @@
                     </div>
 
                     <div class="pt-4">
-                        <!-- NOTE: Update the GitHub href URL to your actual public repository link -->
-                        <a href="https://github.com/sameerhussai230/erp-business-central-agentic-llm/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
+                        <!-- Update href if you published this under a new Manufacturing_Agent repo URL -->
+                        <a href="https://github.com/sameerhussai230/multi-agent-order-processing-ai-foundry-bc" target="_blank" rel="noopener noreferrer" class="inline-flex text-xs font-semibold px-4 py-2 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 items-center gap-1.5 transition">
                             <i class="fa-brands fa-github"></i> View Full Repository & Documentation
                         </a>
                     </div>
